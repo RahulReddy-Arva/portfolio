@@ -11,7 +11,7 @@ export class GithubService {
   getuserdata():any{
 
   
-      this.uriloc ="https://api.github.com/users/rpadma";
+      this.uriloc ="https://api.github.com/users/RahulReddy-Arva";
   
       return this._http.get(this.uriloc).map(data => {
         
