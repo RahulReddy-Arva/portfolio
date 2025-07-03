@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, MapPin, Linkedin, Github, ExternalLink, Send, Phone, Globe } from 'lucide-react'
+import { Mail, MapPin, Linkedin, Github, ExternalLink, Send } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 

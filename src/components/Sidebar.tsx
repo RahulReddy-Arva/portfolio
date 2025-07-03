@@ -12,7 +12,6 @@ import {
   X
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { cn, scrollToSection } from '@/lib/utils'
 import { useSidebar } from '@/components/SidebarProvider'
@@ -109,7 +108,7 @@ export default function Sidebar({ className }: SidebarProps) {
       {/* Navigation */}
       <nav className="flex-1 space-y-2 p-4">
         <div>
-          {navigationItems.map((item, index) => {
+          {navigationItems.map((item, _index) => {
             const IconComponent = item.icon
             const isActive = activeSection === item.id
             

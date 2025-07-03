@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({
   subsets: ['latin'],
@@ -11,6 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://old-portfolio-murex-two.vercel.app'),
   title: 'Rahul Reddy Arva - Senior Software Engineer | AI Platform Architect',
   description: 'Senior Software Engineer with 6+ years experience in AI platforms, enterprise messaging, and security compliance. Specializing in Python, cloud architecture, and scalable solutions.',
   keywords: ['Software Engineer', 'AI Platform', 'Security Compliance', 'Python', 'Enterprise Solutions', 'SOC 2', 'Data Engineering'],
@@ -65,8 +64,6 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   )

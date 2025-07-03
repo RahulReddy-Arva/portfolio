@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "react/no-unescaped-entities": "off",
+    "prefer-const": "warn",
+    "no-console": ["warn", { "allow": ["warn", "error"] }]
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "public/"
+  ]
+}
