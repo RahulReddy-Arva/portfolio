@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
 // Components
@@ -8,6 +8,8 @@ import Sidebar from '@/components/Sidebar'
 import HeroSection from '@/components/sections/HeroSection'
 import AboutSection from '@/components/sections/AboutSection'
 import ExperienceSection from '@/components/sections/ExperienceSection'
+import { ThemeProvider } from '@/components/ThemeProvider'
+import { SidebarProvider } from '@/components/SidebarProvider'
 
 // Dynamically import heavy components to improve initial load
 const SkillsSection = dynamic(() => import('@/components/sections/SkillsSection'), {
@@ -31,37 +33,61 @@ const ContactSection = dynamic(() => import('@/components/sections/ContactSectio
 })
 
 export default function HomePage() {
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+
+  // Listen for sidebar state changes
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSidebarCollapsed(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
-    <div className="relative min-h-screen">
-      {/* Sidebar */}
-      <Sidebar />
+    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
+      <SidebarProvider>
+        <div className="relative min-h-screen">
+          {/* Sidebar */}
+          <Sidebar />
+          
+          {/* Main Content */}
+          <MainContent />
+        </div>
+      </SidebarProvider>
+    </ThemeProvider>
+  )
+}
+
+function MainContent() {
+  return (
+    <main className="md:ml-80 transition-none">
+      {/* Hero Section */}
+      <HeroSection />
       
-      {/* Main Content */}
-      <main className="md:ml-80">
-        {/* Hero Section */}
-        <HeroSection />
-        
-        {/* About Section */}
-        <AboutSection />
-        
-        {/* Experience Section */}
-        <ExperienceSection />
-        
-        {/* Skills Section */}
-        <SkillsSection />
-        
-        {/* Education Section */}
-        <EducationSection />
-        
-        {/* Projects Section */}
-        <ProjectsSection />
-        
-        {/* Certifications Section */}
-        <CertificationsSection />
-        
-        {/* Contact Section */}
-        <ContactSection />
-      </main>
-    </div>
+      {/* About Section */}
+      <AboutSection />
+      
+      {/* Experience Section */}
+      <ExperienceSection />
+      
+      {/* Skills Section */}
+      <SkillsSection />
+      
+      {/* Education Section */}
+      <EducationSection />
+      
+      {/* Projects Section */}
+      <ProjectsSection />
+      
+      {/* Certifications Section */}
+      <CertificationsSection />
+      
+      {/* Contact Section */}
+      <ContactSection />
+    </main>
   )
 }

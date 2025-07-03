@@ -68,7 +68,7 @@ const academicAchievements = [
 
 export default function EducationSection() {
   return (
-    <section id="education" className="py-24 bg-gray-50">
+    <section id="education" className="py-24 bg-gray-50 dark:bg-black smooth-transition">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -78,10 +78,10 @@ export default function EducationSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Education
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Strong academic foundation in computer science with international experience 
             and focus on practical software engineering.
           </p>
@@ -98,7 +98,7 @@ export default function EducationSection() {
               viewport={{ once: true }}
               className="mb-8 last:mb-0"
             >
-              <Card className="hover-lift group overflow-hidden">
+              <Card className="card-hover group overflow-hidden bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
                 <div className={`h-2 bg-gradient-to-r ${edu.color}`} />
                 
                 <CardHeader className="pb-4">
@@ -108,7 +108,7 @@ export default function EducationSection() {
                         <div className={`p-2 bg-gradient-to-br ${edu.color} rounded-lg`}>
                           <GraduationCap className="w-5 h-5 text-white" />
                         </div>
-                        <CardTitle className="text-xl text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                        <CardTitle className="text-xl text-gray-900 dark:text-gray-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                           {edu.degree}
                         </CardTitle>
                         <Button
@@ -121,11 +121,11 @@ export default function EducationSection() {
                         </Button>
                       </div>
                       
-                      <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                      <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
                         {edu.institution}
                       </h3>
                       
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-3">
+                      <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
                         <div className="flex items-center gap-1">
                           <MapPin className="w-4 h-4" />
                           <span>{edu.location}</span>
@@ -142,14 +142,14 @@ export default function EducationSection() {
                     </div>
                   </div>
                   
-                  <CardDescription className="text-gray-600 leading-relaxed">
+                  <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {edu.description}
                   </CardDescription>
                 </CardHeader>
 
                 <CardContent>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-700 mb-3">
+                    <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
                       Key Coursework & Focus Areas
                     </h4>
                     <div className="flex flex-wrap gap-2">
@@ -181,7 +181,7 @@ export default function EducationSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8">
             Academic Highlights
           </h3>
           
@@ -197,15 +197,15 @@ export default function EducationSection() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="text-center p-6 hover-lift">
-                    <IconComponent className="w-8 h-8 text-orange-600 mx-auto mb-4" />
-                    <h4 className="font-semibold text-gray-900 mb-2">
+                  <Card className="text-center p-6 card-hover bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
+                    <IconComponent className="w-8 h-8 text-orange-600 dark:text-orange-400 mx-auto mb-4" />
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
                       {achievement.title}
                     </h4>
-                    <p className="text-sm text-gray-600 mb-3">
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
                       {achievement.description}
                     </p>
-                    <div className="text-lg font-bold text-orange-600">
+                    <div className="text-lg font-bold text-orange-600 dark:text-orange-400">
                       {achievement.metric}
                     </div>
                   </Card>
@@ -223,11 +223,11 @@ export default function EducationSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="inline-block p-8 bg-gradient-to-br from-blue-50 to-purple-50 border-blue-200 max-w-3xl">
-            <h4 className="text-xl font-bold text-gray-900 mb-4">
+          <Card className="inline-block p-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-blue-200 dark:border-blue-700 max-w-3xl">
+            <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Continuous Learning Philosophy
             </h4>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               My educational journey has instilled a passion for continuous learning and innovation. 
               I believe that strong academic fundamentals, combined with practical industry experience, 
               create the foundation for solving complex engineering challenges and driving technological advancement.

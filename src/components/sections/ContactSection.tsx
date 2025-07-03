@@ -63,7 +63,7 @@ export default function ContactSection() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
   return (
-    <section id="contact" className="py-24 bg-gray-900 text-white">
+    <section id="contact" className="py-24 bg-gray-900 dark:bg-gray-900 text-white transition-colors duration-300">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -104,7 +104,7 @@ export default function ContactSection() {
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <Card className="h-full bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                <Card className="h-full bg-white/5 border-white/10 hover:bg-white/10 card-hover group backdrop-blur-xl">
                   <CardHeader className="text-center pb-4">
                     <motion.div
                       animate={{ 
@@ -169,7 +169,7 @@ export default function ContactSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="text-center p-6 bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300">
+                <Card className="text-center p-6 bg-white/5 border-white/10 hover:bg-white/10 card-hover backdrop-blur-xl">
                   <h4 className="font-semibold text-white mb-2">
                     {item.type}
                   </h4>

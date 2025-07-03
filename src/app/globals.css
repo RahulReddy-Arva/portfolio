@@ -69,15 +69,28 @@
 
 @layer components {
   .glass-effect {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    @apply bg-white/70 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10;
   }
   
   .glass-card {
-    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl;
+    @apply bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-gray-200 dark:border-white/20 shadow-xl;
   }
   
   .glass-sidebar {
-    @apply bg-white/5 backdrop-blur-2xl border-r border-white/10;
+    @apply bg-white/90 dark:bg-white/5 backdrop-blur-2xl border-r border-gray-200 dark:border-white/10;
+  }
+
+  /* Dark mode glass effects */
+  .dark .glass-effect {
+    @apply bg-gray-900/20 border-gray-700/30;
+  }
+  
+  .dark .glass-card {
+    @apply bg-gray-900/30 border-gray-700/40;
+  }
+  
+  .dark .glass-sidebar {
+    @apply bg-gray-900/20 border-r border-gray-700/30;
   }
   
   .gradient-text {
@@ -99,11 +112,31 @@
   }
   
   .hover-lift {
-    @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl;
+    @apply transition-all duration-500 ease-out hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-orange-500/20;
+  }
+  
+  .smooth-transition {
+    @apply transition-all duration-700 ease-in-out;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-orange-500/10;
+  }
+  
+  .text-glow-hover {
+    @apply transition-all duration-300 hover:text-shadow hover:drop-shadow-[0_0_8px_rgba(234,88,12,0.6)];
+  }
+  
+  .backdrop-blur-smooth {
+    @apply backdrop-blur-xl transition-all duration-500;
   }
   
   .skill-tag {
     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800 border border-orange-200 transition-all duration-300 hover:bg-orange-500 hover:text-white hover:scale-105;
+  }
+  
+  .dark .skill-tag {
+    @apply bg-orange-900/30 text-orange-300 border-orange-800 hover:bg-orange-500 hover:text-white;
   }
   
   .nav-link {
@@ -117,6 +150,101 @@
   .nav-link.active::before {
     content: '';
     @apply absolute left-0 top-1/2 transform -translate-y-1/2 w-1 h-8 bg-orange-500 rounded-r-full;
+  }
+
+  /* Comprehensive dark mode support */
+  .dark {
+    background-color: #000000;
+    @apply text-gray-100;
+  }
+
+  /* Background Colors */
+  .dark .bg-white {
+    background-color: #000000;
+    @apply border-gray-800;
+  }
+
+  .dark .bg-gray-50 {
+    background-color: #000000;
+  }
+
+  .dark .bg-gray-100 {
+    background-color: #111827;
+  }
+
+  .dark .bg-gray-800 {
+    background-color: #000000;
+  }
+
+  .dark .bg-gray-900 {
+    background-color: #000000;
+  }
+
+  .dark .bg-orange-50 {
+    @apply bg-orange-900/20;
+  }
+
+  .dark .bg-red-50 {
+    @apply bg-red-900/20;
+  }
+
+  .dark .bg-blue-50 {
+    @apply bg-blue-900/20;
+  }
+
+  .dark .bg-green-50 {
+    @apply bg-green-900/20;
+  }
+
+  .dark .bg-purple-50 {
+    @apply bg-purple-900/20;
+  }
+
+  /* Text Colors */
+  .dark .text-gray-900 {
+    @apply text-gray-100;
+  }
+
+  .dark .text-gray-800 {
+    @apply text-gray-200;
+  }
+
+  .dark .text-gray-700 {
+    @apply text-gray-300;
+  }
+
+  .dark .text-gray-600 {
+    @apply text-gray-300;
+  }
+
+  .dark .text-gray-500 {
+    @apply text-gray-400;
+  }
+
+  /* Border Colors */
+  .dark .border-gray-200 {
+    @apply border-gray-700;
+  }
+
+  .dark .border-gray-300 {
+    @apply border-gray-600;
+  }
+
+  .dark .border-orange-200 {
+    @apply border-orange-700;
+  }
+
+  .dark .border-blue-200 {
+    @apply border-blue-700;
+  }
+
+  /* Card and component specific */
+  .dark .shadow-lg {
+    @apply shadow-2xl shadow-black/25;
+  }
+
+  .dark .shadow-xl {
+    @apply shadow-2xl shadow-black/30;
   }
 }
 

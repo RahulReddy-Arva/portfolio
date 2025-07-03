@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Calendar, MapPin, ExternalLink, Award, TrendingUp, Shield, Code } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 const experiences = [
   {
@@ -13,6 +14,7 @@ const experiences = [
     type: 'AI Talent Intelligence Platform',
     duration: 'Dec 2021 - Present (3+ years)',
     location: 'San Francisco Bay Area',
+    logo: '/images/companies/findem.jpg',
     description: 'Building next-generation AI talent intelligence platform serving enterprise customers with advanced search, analytics, and talent insights capabilities.',
     achievements: [
       {
@@ -45,6 +47,7 @@ const experiences = [
     type: 'Subject Matter Expert - Enterprise Messaging & Data Platform',
     duration: 'Sep 2019 - Dec 2021 (2+ years)',
     location: 'Palo Alto, CA',
+    logo: '/images/companies/tibco.jpg',
     description: 'Subject Matter Expert for enterprise messaging and data virtualization solutions, providing advanced engineering support for Fortune 500 clients and high-throughput messaging environments.',
     achievements: [
       {
@@ -77,6 +80,7 @@ const experiences = [
     type: 'Financial Services SME - Point of Sale Systems',
     duration: 'Jun 2018 - Jul 2019 (1+ year)',
     location: 'Bentonville, AR',
+    logo: '/images/companies/walmart.jpg',
     description: 'Subject Matter Expert for Walmart\'s Financial Services at Point of Sale across 6,000+ global retail locations, specializing in Money Orders, Check Cashing, Bill Pay, and Money Transfer services.',
     achievements: [
       {
@@ -107,7 +111,7 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-24 bg-gray-50">
+    <section id="experience" className="py-24 bg-gray-50 dark:bg-black smooth-transition">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -117,10 +121,10 @@ export default function ExperienceSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Professional Experience
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Track record of delivering enterprise-grade solutions across AI platforms, 
             messaging systems, and financial technologies.
           </p>
@@ -143,14 +147,25 @@ export default function ExperienceSection() {
               )}
               
               {/* Timeline Dot */}
-              <div className="absolute left-6 top-8 w-4 h-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-full border-4 border-white shadow-lg z-10" />
+              <div className="absolute left-6 top-8 w-4 h-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-full border-4 border-white dark:border-gray-800 shadow-lg z-10" />
               
-              <Card className="ml-16 hover-lift group">
+              <Card className="ml-16 card-hover group bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
                 <CardHeader className="pb-4">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <CardTitle className="text-2xl text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                        {exp.logo && (
+                          <div className="w-8 h-8 rounded-full overflow-hidden bg-white shadow-sm flex-shrink-0">
+                            <Image
+                              src={exp.logo}
+                              alt={`${exp.company} logo`}
+                              width={32}
+                              height={32}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        )}
+                        <CardTitle className="text-2xl text-gray-900 dark:text-gray-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                           {exp.company}
                         </CardTitle>
                         <Button
@@ -163,28 +178,28 @@ export default function ExperienceSection() {
                         </Button>
                       </div>
                       
-                      <h3 className="text-xl font-semibold text-orange-600 mb-1">
+                      <h3 className="text-xl font-semibold text-orange-600 dark:text-orange-400 mb-1">
                         {exp.role}
                       </h3>
                       
-                      <p className="text-gray-600 mb-3">
+                      <p className="text-gray-600 dark:text-gray-300 mb-3">
                         {exp.type}
                       </p>
                     </div>
                     
                     <div className="text-right">
-                      <div className="flex items-center gap-2 text-gray-500 mb-2">
+                      <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 mb-2">
                         <Calendar className="w-4 h-4" />
                         <span className="font-medium">{exp.duration}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-500">
+                      <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
                         <MapPin className="w-4 h-4" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
                   </div>
                   
-                  <CardDescription className="text-gray-600 leading-relaxed italic mt-4">
+                  <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed italic mt-4">
                     {exp.description}
                   </CardDescription>
                 </CardHeader>
@@ -192,8 +207,8 @@ export default function ExperienceSection() {
                 <CardContent>
                   {/* Key Achievements */}
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                      <Award className="w-5 h-5 text-orange-600" />
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+                      <Award className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                       Key Achievements & Impact
                     </h4>
                     
@@ -208,14 +223,14 @@ export default function ExperienceSection() {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: achIndex * 0.1 }}
                             viewport={{ once: true }}
-                            className="flex gap-3 p-3 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300"
+                            className="flex gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors duration-300"
                           >
-                            <IconComponent className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                            <IconComponent className="w-5 h-5 text-orange-600 dark:text-orange-400 mt-0.5 flex-shrink-0" />
                             <div>
-                              <h5 className="font-semibold text-gray-900 mb-1">
+                              <h5 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
                                 {achievement.title}
                               </h5>
-                              <p className="text-sm text-gray-600 leading-relaxed">
+                              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                                 {achievement.description}
                               </p>
                             </div>
@@ -227,7 +242,7 @@ export default function ExperienceSection() {
 
                   {/* Technologies */}
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-700 mb-3">
+                    <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
                       Technologies & Tools
                     </h4>
                     <div className="flex flex-wrap gap-2">

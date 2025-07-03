@@ -67,7 +67,7 @@ const featuredSkills = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-24 bg-white">
+    <section id="skills" className="py-24 bg-white dark:bg-black smooth-transition">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -77,10 +77,10 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Technical Expertise
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Comprehensive technical stack spanning full-stack development, cloud architecture, 
             data engineering, and enterprise security.
           </p>
@@ -94,7 +94,7 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
             Core Competencies
           </h3>
           
@@ -107,13 +107,13 @@ export default function SkillsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6 hover-lift">
+                <Card className="p-6 card-hover bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
                   <div className="flex justify-between items-center mb-3">
-                    <h4 className="font-semibold text-gray-900">{skill.name}</h4>
-                    <span className="text-sm font-medium text-orange-600">{skill.category}</span>
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100">{skill.name}</h4>
+                    <span className="text-sm font-medium text-orange-600 dark:text-orange-400">{skill.category}</span>
                   </div>
                   
-                  <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-2">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
@@ -124,7 +124,7 @@ export default function SkillsSection() {
                   </div>
                   
                   <div className="text-right">
-                    <span className="text-sm text-gray-600">{skill.level}%</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-300">{skill.level}%</span>
                   </div>
                 </Card>
               </motion.div>
@@ -151,13 +151,13 @@ export default function SkillsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover-lift group">
+                <Card className="h-full card-hover group bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-gradient-to-br from-orange-100 to-red-100 rounded-lg group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-300">
-                        <IconComponent className="w-5 h-5 text-orange-600 group-hover:text-white transition-colors duration-300" />
+                      <div className="p-2 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-lg group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-300">
+                        <IconComponent className="w-5 h-5 text-orange-600 dark:text-orange-400 group-hover:text-white transition-colors duration-300" />
                       </div>
-                      <CardTitle className="text-lg text-gray-900">
+                      <CardTitle className="text-lg text-gray-900 dark:text-gray-100">
                         {category.title}
                       </CardTitle>
                     </div>
@@ -196,11 +196,11 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Card className="inline-block p-8 bg-gradient-to-br from-gray-50 to-orange-50 border-orange-200 max-w-4xl">
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">
+          <Card className="inline-block p-8 bg-gradient-to-br from-gray-50 to-orange-50 dark:from-gray-800 dark:to-orange-900/20 border-orange-200 dark:border-orange-700 max-w-4xl">
+            <h4 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Technology Philosophy
             </h4>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               I believe in choosing the right technology for each challenge, focusing on scalability, 
               security, and maintainability. My approach combines deep technical expertise with 
               practical business understanding to deliver solutions that drive measurable impact.
@@ -214,10 +214,10 @@ export default function SkillsSection() {
                 { label: 'Years Experience', count: '6+' },
               ].map((stat, index) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">
+                  <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">
                     {stat.count}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 dark:text-gray-300">
                     {stat.label}
                   </div>
                 </div>

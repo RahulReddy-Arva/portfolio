@@ -105,7 +105,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-24 bg-white dark:bg-black smooth-transition">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -115,10 +115,10 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
             A showcase of diverse projects spanning machine learning, full-stack development, 
             healthcare platforms, and data analytics.
           </p>
@@ -143,7 +143,7 @@ export default function ProjectsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover-lift group overflow-hidden">
+                <Card className="h-full card-hover group overflow-hidden bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
                   <div className={`h-2 bg-gradient-to-r ${project.color}`} />
                   
                   <CardHeader className="pb-4">
@@ -152,16 +152,16 @@ export default function ProjectsSection() {
                         <IconComponent className="w-5 h-5 text-white" />
                       </div>
                       <div className="flex-1">
-                        <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+                        <div className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                           {project.category}
                         </div>
-                        <CardTitle className="text-lg text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                        <CardTitle className="text-lg text-gray-900 dark:text-gray-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                           {project.title}
                         </CardTitle>
                       </div>
                     </div>
                     
-                    <CardDescription className="text-gray-600 leading-relaxed">
+                    <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed">
                       {project.description}
                     </CardDescription>
                   </CardHeader>
@@ -169,13 +169,13 @@ export default function ProjectsSection() {
                   <CardContent className="space-y-6">
                     {/* Key Features */}
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                      <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                         Key Features
                       </h4>
                       <ul className="space-y-1">
                         {project.features.map((feature, featureIndex) => (
-                          <li key={feature} className="text-sm text-gray-600 flex items-start gap-2">
-                            <span className="w-1 h-1 bg-orange-500 rounded-full mt-2 flex-shrink-0" />
+                          <li key={feature} className="text-sm text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                            <span className="w-1 h-1 bg-orange-500 dark:bg-orange-400 rounded-full mt-2 flex-shrink-0" />
                             {feature}
                           </li>
                         ))}
@@ -184,7 +184,7 @@ export default function ProjectsSection() {
 
                     {/* Technologies */}
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                      <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                         Technologies
                       </h4>
                       <div className="flex flex-wrap gap-1">
@@ -195,7 +195,7 @@ export default function ProjectsSection() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.4, delay: techIndex * 0.05 }}
                             viewport={{ once: true }}
-                            className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-md"
+                            className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md"
                           >
                             {tech}
                           </motion.span>
@@ -243,11 +243,11 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Card className="inline-block p-8 bg-gradient-to-br from-gray-50 to-blue-50 border-blue-200 max-w-4xl">
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">
+          <Card className="inline-block p-8 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 border-blue-200 dark:border-blue-700 max-w-4xl">
+            <h4 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Project Portfolio Highlights
             </h4>
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
               My project portfolio demonstrates versatility across multiple domains, from machine learning 
               and data analytics to full-stack development and enterprise healthcare solutions. Each project 
               showcases different aspects of modern software development and problem-solving approaches.
@@ -261,10 +261,10 @@ export default function ProjectsSection() {
                 { label: 'Live Deployments', count: '4' },
               ].map((stat, index) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                     {stat.count}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 dark:text-gray-300">
                     {stat.label}
                   </div>
                 </div>

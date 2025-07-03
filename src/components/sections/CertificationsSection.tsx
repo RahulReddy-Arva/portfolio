@@ -85,7 +85,7 @@ const certificationStats = [
 
 export default function CertificationsSection() {
   return (
-    <section id="certifications" className="py-24 bg-gray-50">
+    <section id="certifications" className="py-24 bg-gray-50 dark:bg-black smooth-transition">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -95,10 +95,10 @@ export default function CertificationsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Certifications & Achievements
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Professional milestones, certifications, and continuous learning achievements 
             spanning security compliance, programming, and system administration.
           </p>
@@ -123,12 +123,12 @@ export default function CertificationsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="text-center p-6 hover-lift">
-                  <IconComponent className="w-8 h-8 text-orange-600 mx-auto mb-3" />
-                  <div className="text-2xl font-bold text-gray-900 mb-1">
+                <Card className="text-center p-6 card-hover bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
+                  <IconComponent className="w-8 h-8 text-orange-600 dark:text-orange-400 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-1">
                     {stat.count}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 dark:text-gray-300">
                     {stat.label}
                   </div>
                 </Card>
@@ -156,7 +156,7 @@ export default function CertificationsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover-lift group overflow-hidden">
+                <Card className="h-full card-hover group overflow-hidden bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
                   <div className={`h-2 bg-gradient-to-r ${cert.color}`} />
                   
                   <CardHeader className="pb-4">
@@ -166,23 +166,23 @@ export default function CertificationsSection() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center justify-between mb-1">
-                          <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+                          <div className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                             {cert.category}
                           </div>
-                          <div className="text-xs font-medium text-gray-500">
+                          <div className="text-xs font-medium text-gray-500 dark:text-gray-400">
                             {cert.year}
                           </div>
                         </div>
-                        <CardTitle className="text-lg text-gray-900 group-hover:text-orange-600 transition-colors duration-300 leading-tight">
+                        <CardTitle className="text-lg text-gray-900 dark:text-gray-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 leading-tight">
                           {cert.title}
                         </CardTitle>
-                        <div className="text-sm font-medium text-orange-600 mt-1">
+                        <div className="text-sm font-medium text-orange-600 dark:text-orange-400 mt-1">
                           {cert.organization}
                         </div>
                       </div>
                     </div>
                     
-                    <CardDescription className="text-gray-600 leading-relaxed text-sm">
+                    <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                       {cert.description}
                     </CardDescription>
                   </CardHeader>
@@ -190,10 +190,10 @@ export default function CertificationsSection() {
                   <CardContent className="space-y-4">
                     {/* Achievement Highlight */}
                     {cert.achievement && (
-                      <div className="p-2 bg-green-50 border border-green-200 rounded-lg">
+                      <div className="p-2 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
                         <div className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-600" />
-                          <span className="text-sm font-medium text-green-800">
+                          <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
+                          <span className="text-sm font-medium text-green-800 dark:text-green-300">
                             {cert.achievement}
                           </span>
                         </div>
@@ -202,14 +202,14 @@ export default function CertificationsSection() {
 
                     {/* Certificate ID */}
                     {cert.certificateId && (
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-500 dark:text-gray-400">
                         <span className="font-medium">Certificate ID:</span> {cert.certificateId}
                       </div>
                     )}
 
                     {/* Skills */}
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                      <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                         Skills Acquired
                       </h4>
                       <div className="flex flex-wrap gap-1">
@@ -220,7 +220,7 @@ export default function CertificationsSection() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.4, delay: skillIndex * 0.05 }}
                             viewport={{ once: true }}
-                            className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-md"
+                            className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md"
                           >
                             {skill}
                           </motion.span>
@@ -255,14 +255,14 @@ export default function CertificationsSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="inline-block p-8 bg-gradient-to-br from-orange-50 to-red-50 border-orange-200 max-w-4xl">
+          <Card className="inline-block p-8 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border-orange-200 dark:border-orange-700 max-w-4xl">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Award className="w-8 h-8 text-orange-600" />
-              <h4 className="text-2xl font-bold text-gray-900">
+              <Award className="w-8 h-8 text-orange-600 dark:text-orange-400" />
+              <h4 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                 Continuous Learning & Professional Development
               </h4>
             </div>
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
               My certification journey reflects a commitment to staying current with evolving technologies 
               and industry best practices. From foundational programming concepts to advanced security compliance, 
               each certification has contributed to building a comprehensive skill set that enables me to tackle 
@@ -270,17 +270,17 @@ export default function CertificationsSection() {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="p-4 bg-white rounded-lg">
-                <div className="text-lg font-bold text-orange-600 mb-1">2015-2023</div>
-                <div className="text-sm text-gray-600">Learning Timeline</div>
+              <div className="p-4 bg-white dark:bg-gray-800 rounded-lg">
+                <div className="text-lg font-bold text-orange-600 dark:text-orange-400 mb-1">2015-2023</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Learning Timeline</div>
               </div>
-              <div className="p-4 bg-white rounded-lg">
-                <div className="text-lg font-bold text-orange-600 mb-1">6+ Platforms</div>
-                <div className="text-sm text-gray-600">Learning Sources</div>
+              <div className="p-4 bg-white dark:bg-gray-800 rounded-lg">
+                <div className="text-lg font-bold text-orange-600 dark:text-orange-400 mb-1">6+ Platforms</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Learning Sources</div>
               </div>
-              <div className="p-4 bg-white rounded-lg">
-                <div className="text-lg font-bold text-orange-600 mb-1">Enterprise Impact</div>
-                <div className="text-sm text-gray-600">Real-world Application</div>
+              <div className="p-4 bg-white dark:bg-gray-800 rounded-lg">
+                <div className="text-lg font-bold text-orange-600 dark:text-orange-400 mb-1">Enterprise Impact</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">Real-world Application</div>
               </div>
             </div>
           </Card>

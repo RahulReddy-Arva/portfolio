@@ -61,7 +61,7 @@ const achievements = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-white dark:bg-black smooth-transition">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -71,10 +71,10 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Professional Overview
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Senior Software Engineer with <span className="font-semibold text-orange-600">6+ years</span> of proven expertise in building scalable AI-driven platforms, 
             enterprise messaging systems, and secure financial technologies.
           </p>
@@ -99,24 +99,24 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover-lift group">
+                <Card className="h-full card-hover group bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
                   <CardHeader>
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="p-3 bg-gradient-to-br from-orange-100 to-red-100 rounded-xl group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-300">
-                        <IconComponent className="w-6 h-6 text-orange-600 group-hover:text-white transition-colors duration-300" />
+                      <div className="p-3 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-xl group-hover:from-orange-500 group-hover:to-red-500 transition-all duration-300">
+                        <IconComponent className="w-6 h-6 text-orange-600 dark:text-orange-400 group-hover:text-white transition-colors duration-300" />
                       </div>
                       <div>
-                        <CardTitle className="text-xl text-gray-900">
+                        <CardTitle className="text-xl text-gray-900 dark:text-gray-100">
                           {highlight.title}
                         </CardTitle>
-                        <div className="text-sm font-semibold text-orange-600">
+                        <div className="text-sm font-semibold text-orange-600 dark:text-orange-400">
                           {highlight.stats}
                         </div>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-gray-600 leading-relaxed">
+                    <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed">
                       {highlight.description}
                     </CardDescription>
                   </CardContent>
@@ -134,10 +134,10 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Key Impact Metrics
           </h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Measurable results across enterprise environments and high-scale systems
           </p>
         </motion.div>
@@ -160,16 +160,16 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="text-center p-6 hover-lift group">
+                <Card className="text-center p-6 card-hover group bg-white dark:bg-black border-gray-200 dark:border-gray-800 smooth-transition">
                   <div className="mb-4">
-                    <IconComponent className="w-8 h-8 text-orange-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-                    <div className="text-3xl font-bold text-gray-900 mb-1">
+                    <IconComponent className="w-8 h-8 text-orange-600 dark:text-orange-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+                    <div className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-1">
                       {achievement.value}
                     </div>
-                    <div className="text-sm font-semibold text-orange-600 mb-2">
+                    <div className="text-sm font-semibold text-orange-600 dark:text-orange-400 mb-2">
                       {achievement.label}
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-500 dark:text-gray-400">
                       {achievement.description}
                     </div>
                   </div>
@@ -187,11 +187,11 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Card className="inline-block p-8 bg-gradient-to-br from-orange-50 to-red-50 border-orange-200">
-            <h4 className="text-2xl font-bold text-gray-900 mb-4">
+          <Card className="inline-block p-8 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border-orange-200 dark:border-orange-700">
+            <h4 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Ready to Build Something Extraordinary?
             </h4>
-            <p className="text-gray-600 mb-6 max-w-2xl">
+            <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl">
               I bring proven expertise in AI platforms, enterprise security, and scalable system design. 
               Let's discuss how we can drive measurable impact for your organization.
             </p>
