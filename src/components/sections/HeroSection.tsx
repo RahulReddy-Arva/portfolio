@@ -136,7 +136,7 @@ export default function HeroSection() {
                 className="font-semibold px-8 py-3 smooth-transition"
                 onClick={() => {
                   // This would typically link to a resume PDF
-                  console.log('Download resume clicked')
+                  // TODO: Add resume download functionality
                 }}
               >
                 <Download className="w-5 h-5 mr-2" />

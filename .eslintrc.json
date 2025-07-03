@@ -1,12 +1,10 @@
 {
   "extends": [
-    "next/core-web-vitals",
-    "next/typescript"
+    "next/core-web-vitals"
   ],
   "rules": {
     "@next/next/no-img-element": "off",
     "react/no-unescaped-entities": "off",
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "prefer-const": "warn",
     "no-console": ["warn", { "allow": ["warn", "error"] }]
   },

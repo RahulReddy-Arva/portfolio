@@ -17,11 +17,12 @@ A modern, enterprise-grade portfolio website built with Next.js, TypeScript, and
 - **Certifications**: SOC 2 Type II leadership, programming certifications, and continuous learning
 
 ### Technical Excellence
-- **Next.js 14**: Modern React framework with App Router
+- **Next.js 14.1.0**: Stable React framework with App Router
 - **TypeScript**: Type-safe development
 - **Tailwind CSS**: Utility-first styling
 - **shadcn/ui**: High-quality component library
 - **Framer Motion**: Smooth animations and transitions
+- **Error Boundaries**: Resilient UX with graceful fallbacks
 
 ### Enterprise Ready
 - **SEO Optimized**: Comprehensive meta tags and structured data
@@ -31,7 +32,7 @@ A modern, enterprise-grade portfolio website built with Next.js, TypeScript, and
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Next.js 14.1.0 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Components**: shadcn/ui + Radix UI
