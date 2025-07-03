@@ -2,6 +2,8 @@
 
 A modern, enterprise-grade portfolio website showcasing senior software engineering expertise. Built with Next.js 14.1.0, TypeScript, and Tailwind CSS, featuring a sophisticated liquid glass UI design and comprehensive error handling.
 
+🌐 **[Live Demo](https://old-portfolio-murex-two.vercel.app)**
+
 ## 🚀 Key Features
 
 ### Design & User Experience
@@ -141,6 +143,10 @@ npm run clean        # Clean build artifacts
    git push origin main  # Auto-deploy on push
    ```
 
+#### Live Demo
+The portfolio is currently deployed and accessible at:
+**[https://old-portfolio-murex-two.vercel.app](https://old-portfolio-murex-two.vercel.app)**
+
 #### Manual Deployment
 ```bash
 npm run deploy        # Full build pipeline
@@ -276,12 +282,14 @@ npm run build:analyze    # Opens webpack-bundle-analyzer
 - **Framework**: Next.js 14.1.0 (stable)
 - **Build Time**: ~30-45 seconds average
 - **Deploy Target**: Vercel Edge Network
+- **Live URL**: [https://old-portfolio-murex-two.vercel.app](https://old-portfolio-murex-two.vercel.app)
 - **Status**: ✅ Production Ready
 
 ### Monitoring & Analytics
 - **Error Tracking**: Built-in error boundaries
 - **Performance**: Core Web Vitals monitoring ready
 - **SEO**: Search engine optimization complete
+- **Deployment**: Auto-deploy on git push to main branch
 
 ## 📝 Project License
 
@@ -291,6 +299,7 @@ This portfolio represents professional work and personal projects. All content i
 
 - **Primary Email**: rahulreddy.arva55@gmail.com
 - **LinkedIn**: [linkedin.com/in/rarva](https://linkedin.com/in/rarva)
+- **Portfolio**: [https://old-portfolio-murex-two.vercel.app](https://old-portfolio-murex-two.vercel.app)
 - **Location**: San Francisco Bay Area, California
 - **Availability**: Open to Senior/Staff Engineer and Technical Leadership opportunities
 

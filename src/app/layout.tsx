@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rahul-portfolio.vercel.app'),
+  metadataBase: new URL('https://old-portfolio-murex-two.vercel.app'),
   title: 'Rahul Reddy Arva - Senior Software Engineer | AI Platform Architect',
   description: 'Senior Software Engineer with 6+ years experience in AI platforms, enterprise messaging, and security compliance. Specializing in Python, cloud architecture, and scalable solutions.',
   keywords: ['Software Engineer', 'AI Platform', 'Security Compliance', 'Python', 'Enterprise Solutions', 'SOC 2', 'Data Engineering'],

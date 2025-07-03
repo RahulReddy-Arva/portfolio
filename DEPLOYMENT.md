@@ -4,6 +4,8 @@
 
 This project is optimized for Vercel deployment with locked dependencies to prevent build failures.
 
+🌐 **Live Demo**: [https://old-portfolio-murex-two.vercel.app](https://old-portfolio-murex-two.vercel.app)
+
 ### Key Configuration Files
 
 1. **package.json**: All dependencies locked to exact versions
@@ -36,12 +38,19 @@ npx vercel --prod
 
 ### Build Configuration
 
+Vercel auto-detects Next.js projects. Key configuration:
+
+- **Node.js Version**: Specified in `.nvmrc` (18.17.0)
+- **Package Management**: Uses `package-lock.json` for exact installs
+- **Build Command**: `next build` (auto-detected)
+- **Dependencies**: All locked to exact versions
+
 ```json
+// vercel.json (minimal configuration)
 {
-  "framework": "nextjs",
-  "buildCommand": "npm ci && npm run build",
-  "nodeVersion": "18.17.0",
-  "installCommand": "npm ci"
+  "headers": [
+    // Security headers configuration
+  ]
 }
 ```
 
