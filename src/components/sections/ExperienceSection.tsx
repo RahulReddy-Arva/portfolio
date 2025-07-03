@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Calendar, MapPin, ExternalLink, Award, TrendingUp, Shield, Code } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
+import { CompanyLogo } from '@/components/ImageWithFallback'
 
 const experiences = [
   {
@@ -155,15 +155,12 @@ export default function ExperienceSection() {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         {exp.logo && (
-                          <div className="w-8 h-8 rounded-full overflow-hidden bg-white shadow-sm flex-shrink-0">
-                            <Image
-                              src={exp.logo}
-                              alt={`${exp.company} logo`}
-                              width={32}
-                              height={32}
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
+                          <CompanyLogo
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
+                            company={exp.company}
+                            className="flex-shrink-0"
+                          />
                         )}
                         <CardTitle className="text-2xl text-gray-900 dark:text-gray-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                           {exp.company}
